@@ -1,0 +1,14 @@
+import os
+from simple_colors import *
+
+Serial_list = os.system("ls /dev/cu.usbserial-*")
+
+print(blue("Above are Serial cable lists"))
+
+Serial_Cable_Name = input("copy or enter the serial cable")
+
+Connect_Serial_Cable = os.system("screen"  + Serial_Cable_Name)
+
+print('bold:',red('Error message cannot connect \n check the cable is
+connected or change the cable'))
+
