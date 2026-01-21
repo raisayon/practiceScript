@@ -1,0 +1,5 @@
+greet = "hello"
+var_hex = hex(id(greet))
+print(var_hex)
+hex_todeci = int(var_hex,16)
+print(hex_todeci)
