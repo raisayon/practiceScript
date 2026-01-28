@@ -32,3 +32,7 @@ lay next
 break main //adding break point
 run
 next       //goes to next line of code
+ref        //refresh
+x/i $pc    // examines the instruction at $pc
+info registers // registers state of the program and check problem during the instruction
+
