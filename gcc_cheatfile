@@ -1,0 +1,34 @@
+##COMPILE THE PROGRAM
+
+gcc -o main chall.c -g
+This command compiles a C source file named chall.c into an executable file named main while embedding debugging information. 
+Here is the breakdown of the command:
+gcc: Invokes the GNU Compiler Collection.
+-o main: Specifies the output file name. In this case, the resulting binary is named main (instead of the default a.out).
+chall.c: The source code file to be compiled.
+-g: Tells the compiler to include debugging information in the executable. This allows you to use debuggers like GDB to trace the program, examine variables, and see which line of code caused a crash. 
+Usage
+After running this command, you can run the executable using: 
+bash
+./main
+Or, debug it with GDB: 
+bash
+gdb ./main
+Recommendation
+For better debugging, it is often recommended to combine this with the -O0 flag (zero optimization) to ensure the debugger matches the source code exactly: 
+bash
+gcc -g -O0 -o main chall.c
+file main
+
+##EXECUTING COMPILED FILE
+
+Linux/macOS: ./hello
+Windows: hello.exe or simply hello
+
+##GNU DEBUGGING
+
+gdb ./main
+lay next
+break main //adding break point
+run
+next       //goes to next line of code
