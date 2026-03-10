@@ -1,0 +1,1 @@
+Parsing - Analyzing a file's content to correctly structure the data
