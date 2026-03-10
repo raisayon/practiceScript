@@ -79,3 +79,11 @@ if $facts['is_virtual'] {
     ensure => installed,
   }
 }
+
+#This resource ensures that the /etc/issue file has a set of permissions and a specific line in it. Fulfilling this requirement is an idempotent operation. If the file already exists and has the desired content, then Puppet will understand that no action has to be taken. If the file doesn't exist, then puppet will create it. If the contents or permissions don't match, Puppet will fix them. No matter how many times the agent applies the rule, the end result is that this file will have the requested contents and permissions. 
+file { '/etc/issue':
+  mode    => '0644',
+  content => "Internal system \l \n",
+}
+
+
