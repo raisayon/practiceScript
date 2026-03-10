@@ -1,1 +1,2 @@
 puppet - configuration management tool
+Automation - An essential tool for keeping up with the infrastructure needs of a growing business
