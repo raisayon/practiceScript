@@ -2,7 +2,7 @@ Ansible - configuration management tool
 Automation - An essential tool for keeping up with the infrastructure needs of a growing business
 CFEngine - configuration management tool
 Chef - configuration management tool
-Infrastructure as Code - The paradigm of storing ​all the configuration for the managed devices in ​version controlled files is known as ​Infrastructure as Code or IaC.
+Infrastructure as Code - The paradigm of storing ​all the configuration for the managed devices in ​version controlled files is known as ​Infrastructure as Code or IaC.When all the configuration necessary to deploy and manage a node in the infrastructure is stored in version control
 Managed Configuration - using a configuration management system to handle all ​of the configuration of the devices in your fleet, also known as nodes.
 Puppet - configuration management tool
 Scale - can keep achieving larger impacts ​with the same amount of effort
