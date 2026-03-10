@@ -4,7 +4,9 @@ CFEngine - configuration management tool
 Chef - configuration management tool
 Infrastructure as Code - The paradigm of storing ​all the configuration for the managed devices in ​version controlled files is known as ​Infrastructure as Code or IaC.When all the configuration necessary to deploy and manage a node in the infrastructure is stored in version control
 Managed Configuration - using a configuration management system to handle all ​of the configuration of the devices in your fleet, also known as nodes.
-Puppet - configuration management tool
-Scale - can keep achieving larger impacts ​with the same amount of effort
 
+Puppet - configuration management tool
+Resources - The basic unit for modeling the configuration that we want to manage such as user, group, file, service or package.
+Provider - When we declare a resource in our puppet rules. ​We're defining the desired state of that resource in the system. ​The puppet agent then turns the desired state into reality using providers. ​The provider used will depend on the resource defined and ​the environment where the agent is running. 
+Scale - can keep achieving larger impacts ​with the same amount of effort
 
