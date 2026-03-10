@@ -1,2 +1,4 @@
-puppet - configuration management tool
 Automation - An essential tool for keeping up with the infrastructure needs of a growing business
+Puppet - configuration management tool
+Scale - can keep achieving larger impacts ​with the same amount of effort
+
