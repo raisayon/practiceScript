@@ -12,6 +12,7 @@ More Information About Configuration Management
 https://www.oreilly.com/library/view/puppet-best-practices/9781491922996/ch01.html
 
 Puppet Facts - Variables that represent the characteristics of the system
+Catalog - The list of rules that are generated for one specific computer once the server has evaluated all variables , conditionals and functions
 Domain Specific Language (DSL) - A programming language that's more limited in scope
 Resources - The basic unit for modeling the configuration that we want to manage such as user, group, file, service or package.
 Provider - When we declare a resource in our puppet rules. ​We're defining the desired state of that resource in the system. ​The puppet agent then turns the desired state into reality using providers. ​The provider used will depend on the resource defined and ​the environment where the agent is running. 
