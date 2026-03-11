@@ -5,6 +5,7 @@ Chef - configuration management tool
 Idempotent - action can be performed over and over again without changing the system after the first time the action was performed and with no unintended side effects
 Infrastructure as Code - The paradigm of storing ​all the configuration for the managed devices in ​version controlled files is known as ​Infrastructure as Code or IaC.When all the configuration necessary to deploy and manage a node in the infrastructure is stored in version control
 Managed Configuration - using a configuration management system to handle all ​of the configuration of the devices in your fleet, also known as nodes.
+test and repair" paradigm - should only take actions when testing dtermines they need to be done to reach the requested state
 
 Puppet - configuration management tool
 More Information About Configuration Management
