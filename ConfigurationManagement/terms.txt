@@ -7,6 +7,9 @@ Infrastructure as Code - The paradigm of storing ​all the configuration for th
 Managed Configuration - using a configuration management system to handle all ​of the configuration of the devices in your fleet, also known as nodes.
 
 Puppet - configuration management tool
+More Information About Configuration Management
+https://www.oreilly.com/library/view/puppet-best-practices/9781491922996/ch01.html
+
 Puppet Facts - Variables that represent the characteristics of the system
 Domain Specific Language (DSL) - A programming language that's more limited in scope
 Resources - The basic unit for modeling the configuration that we want to manage such as user, group, file, service or package.
