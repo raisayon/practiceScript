@@ -16,10 +16,12 @@ Catalog - The list of rules that are generated for one specific computer once th
 Domain Specific Language (DSL) - A programming language that's more limited in scope
 Module - A collection of manifests and associated data
 Node - Any system where we can run a puppet agent
+--noop parameter used for - No Operations mode makes Puppet simulate what it would do without actually doing it.
 The puppet parser - validate command checks the syntax of the manifest to make sure it's correct.
 Resources - The basic unit for modeling the configuration that we want to manage such as user, group, file, service or package.
 Resource Relationships - 
 When declaring resources initially, we type the resource type in lowercase. When we reference a resource relationship from another file, we capitalize the resource name being referenced.
+Production - is the parts of the infrastructure where ​a service is executed and served to its users. ​
 Provider - When we declare a resource in our puppet rules. ​We're defining the desired state of that resource in the system. ​The puppet agent then turns the desired state into reality using providers. ​The provider used will depend on the resource defined and ​the environment where the agent is running. 
 Scale - can keep achieving larger impacts ​with the same amount of effort
 
