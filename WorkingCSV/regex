@@ -1,0 +1,38 @@
+#You have a list of website urls that includes both securely encrypted websites that begin with https://www. and the unencrypted websites that begin with http://. The list includes websites that end in .com and .co. 
+#Complete the secure_website_domain() function so it returns the part of the website between www. and the last part of the url (.com or .co) for only the secure websites. 
+
+import re
+
+def secure_website_domain(website):
+    pattern = r"^https://www\.([a-zA-Z]+)\.com$"  # enter the regex pattern here
+    result = re.search(pattern, website)  # enter the re method here
+    if result is None:
+        return ""
+    return result.group(1)  # enter the correct capturing group
+
+
+print(secure_website_domain("http://www.text.com")) #Should return nothing
+print(secure_website_domain("https://www.text.com")) #Should return text
+print(secure_website_domain("http://www.text.co")) #Should return nothing
+print(secure_website_domain("https://www.text.co")) #Should return text
+
+Explanation:
+
+Pattern: r"^https://www\.([a-zA-Z]+)\.com$"
+
+^ - matches the start of the string
+
+https:// - matches exactly "https://" (secure protocol)
+
+www\. - matches "" (escaped dot)
+
+([a-zA-Z]+) - captures one or more letters (the domain name)
+
+\.com$ - matches ".com" at the end of the string
+
+This ensures only https protocol and .com domains are matched
+
+Method: re.search() - finds the first occurrence of the pattern in the string
+
+Capturing group: result.group(1) - returns the first captured group (the domain name)
+
