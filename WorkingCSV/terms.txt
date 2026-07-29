@@ -1,1 +1,4 @@
 Parsing - Analyzing a file's content to correctly structure the data
+#ErrorHandling
+assert - This keyword is used to produce a message when a conditional is false.
+
