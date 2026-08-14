@@ -79,3 +79,47 @@ In this course, you have been running code in a notebook environment. However, y
 In cases when you can't find the line of code that is causing the issue, debuggers help you narrow down the source of the error in your program. They do this by working with  breakpoints. Breakpoints are markers placed on certain lines of executable code that indicate which sections of code should run when debugging.
 
 Some debuggers also have a feature that allows you to check the values stored in variables as they change throughout your code. This is especially helpful for logic errors so that you can locate where variable values have unintentionally changed. 
+
+Gemini Code Assist
+Recent advancements in AI have opened up many opportunities for enhancing IDEs with powerful, context-aware coding assistance. These are tools that are integrated directly into the IDE or coding environment to provide a more seamless coding experience. For example, 
+Gemini Code Assist
+ is a free AI tool that integrates into popular IDEs like Visual Studio Code and JetBrains. It functions as an assistant that can help analyze code and find errors, suggest modifications, and also interact in a conversational way to answer many other questions, whether they’re technical or more conceptual. 
+
+These tools are quickly becoming indispensable to coders and cybersecurity professionals as they facilitate and accelerate workflows, but if you choose to use them, please remember that this technology is still evolving. The suggestions, code, or explanations provided may not always be perfectly accurate, optimal, or secure. Always review and validate any AI-generated output before executing programs or relying on the information. Treat the AI assistance as a helpful co-pilot, but maintain oversight and responsibility for your final code.
+
+Use print statements 
+Another debugging strategy is to incorporate temporary print statements that are designed to identify the source of the error. You should strategically incorporate these print statements to print at various locations in the code. You can specify line numbers as well as descriptive text about the location. 
+
+For example, you may have code that is intended to add new users to an approved list and then display the approved list. The code should not add users that are already on the approved list. If you analyze the output of this code after you run it, you will realize that there is a logic error:
+
+<code>
+new_users = ["sgilmore", "bmoreno"]
+approved_users = ["bmoreno", "tshah", "elarson"]
+def add_users():
+    for user in new_users:
+        if user in approved_users:
+            print(user,"already in list")
+        approved_users.append(user)
+add_users()
+print(approved_users)
+</code>
+Even though you get the message "bmoreno already in list", a second instance of "bmoreno" is added to the list. In the following code, print statements have been added to the code. When you run it, you can examine what prints:
+
+<code>
+new_users = ["sgilmore", "bmoreno"]
+approved_users = ["bmoreno", "tshah", "elarson"]
+def add_users():
+    for user in new_users:
+        print("line 5 - inside for loop")
+        if user in approved_users:
+            print("line 7 - inside if statement")
+            print(user,"already in list")
+        print("line 9 - before .append method")
+        approved_users.append(user)
+</code>
+The print statement "line 5 - inside for loop" outputs twice, indicating that Python has entered the for loop for each username in new_users. This is as expected. Additionally, the print statement "line 7 - inside if statement" only outputs once, and this is also as expected because only one of these usernames was already in approved_users.
+
+However, the print statement "line 9 - before .append method" outputs twice. This means the code calls the .append() method for both usernames even though one is already in approved_users. This helps isolate the logic error to this area. This can help you realize that the line of code approved_users.append(user) should be the body of an else statement so that it only executes when user is not in approved_users.
+
+Key takeaways
+There are three main types of errors you'll encounter while coding in Python. Syntax errors involve invalid usage of the programming language. Logic errors occur when the logic produced in the code produces unintended results. Exceptions involve code that cannot be executed even though it is syntactically correct. You will receive error messages for syntax errors and exceptions that can help you fix these mistakes. Additionally, using debuggers and inserting print statements can help you identify logic errors and further debug exceptions. 
