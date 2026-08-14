@@ -1,0 +1,5 @@
+Types of errors
+- syntax errors
+- Logic errors
+- Exceptions
+
